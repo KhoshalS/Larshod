@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SelectionActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/selectionAPPBAR"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:onClick="goBack"
+                android:src="@drawable/ic_arrow_back"
+                />
+            <TextView
+                android:id="@+id/appbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/helicomptino75"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:layout_below="@+id/selectionAPPBAR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/selection_list_view"
+        android:layout_marginBottom="100dp"/>
+
+    <RelativeLayout
+        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/selectionAPPBAR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/topicLayout"
+        >
+        <ScrollView
+            android:id="@+id/theScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/view_img"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_marginTop="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/helicomptino75"
+                    android:id="@+id/view_title"/>
+
+                <TextView
+                    android:layout_below="@+id/view_title"
+                    android:id="@+id/view_textview"
+                    android:fontFamily="@font/helicomptino45"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:textColor="@color/black"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/view_textview"/>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/adContainerLayout"
+        android:layout_alignParentBottom="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adContainer"
+            android:orientation="horizontal"
+            />
+    </RelativeLayout>
+
+  </RelativeLayout>
